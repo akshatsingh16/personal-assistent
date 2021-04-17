@@ -1,0 +1,2 @@
+ (+) Audio --aid=1 --alang=eng (*) (opus 2ch 48000Hz)
+AO: [wasapi] 48000Hz stereo 2ch float
