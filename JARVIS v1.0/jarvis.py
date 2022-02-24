@@ -18,7 +18,7 @@ import random
 import randfacts
 from os import write
 import serial
-Arduino_Serial = serial.Serial('com6', 9600)
+#Arduino_Serial = serial.Serial('com6', 9600)
 
 def wishMe():
     hour = int(datetime.datetime.now().hour) 
@@ -32,7 +32,7 @@ def wishMe():
         speak("GoodEvening!")
 
     speak("I am Jarvis")
-    Arduino_Serial.write(str.encode('on1'))
+    #Arduino_Serial.write(str.encode('on1'))
 
 
 engine = pyttsx3.init('sapi5')
@@ -153,14 +153,14 @@ if __name__ == "__main__":
 #--------------------------------------------------------------------------------------------
         elif 'protocol' in query:
             speak("turning on barn protocol")
-            Arduino_Serial.write(str.encode('off1'))
+           # Arduino_Serial.write(str.encode('off1'))
             sleep(2)
-            Arduino_Serial.write(str.encode('on2'))
+           # Arduino_Serial.write(str.encode('on2'))
 # ---------------------------------------------------------------------------------------------
         elif 'turn of' in query:
-            Arduino_Serial.write(str.encode('on1'))
+           # Arduino_Serial.write(str.encode('on1'))x
             sleep(2)
-            Arduino_Serial.write(str.encode('off2'))
+           # Arduino_Serial.write(str.encode('off2'))
 # ---------------------------------------------------------------------------------------------
         elif 'kill the power' in query:
             os.system("shutdown /s /t 1")
